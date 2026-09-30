@@ -16,3 +16,32 @@ A small electronics retailer needs a structured way to track customers, the prod
 - Wrote `SELECT` queries to verify each table, and a multi-table `JOIN` query to calculate each customer's total order value.
 
 ## Entity relationships
+
+Customer (1) ──< Orders (1) ──< Order_Items >── (1) Products
+Suppliers (independent reference table)
+
+
+## Key query: order totals per customer
+
+```sql
+SELECT c.FirstName, c.LastName, o.Order_id,
+       SUM(p.Price * oi.Quantity) AS Order_Total
+FROM Customer c
+JOIN Orders o ON c.Customer_id = o.Customer_id
+JOIN Order_Items oi ON o.Order_id = oi.Order_id
+JOIN Products p ON oi.Product_id = p.Product_id
+GROUP BY c.FirstName, c.LastName, o.Order_id;
+```
+
+## Tools
+
+MySQL, SQL (DDL and DML), relational database design, primary/foreign keys, JOINs, aggregation.
+
+## File
+
+- `market_sql.sql` — full script: database creation, table creation, data inserts, and verification/analysis queries.
+
+## Author
+
+**Betty Ejakpovi** — Data Analyst (Excel · SQL · Power BI)
+[LinkedIn](https://www.linkedin.com/in/orherime-ejakpovi) · [Portfolio](https://claude.ai/artifact/23Vv8oDfKdk5FSzsrqq6E3)
