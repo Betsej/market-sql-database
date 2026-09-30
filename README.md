@@ -39,7 +39,7 @@ MySQL, SQL (DDL and DML), relational database design, primary/foreign keys, JOIN
 
 ## File
 
-- `market_sql.sql` — full script: database creation, table creation, data inserts, and verification/analysis queries.
+- `market_analysis.sql` — full script: database creation, table creation, data inserts, and verification/analysis queries.
 
 ## Author
 
