@@ -49,4 +49,4 @@ MySQL, SQL (DDL and DML), relational database design, primary/foreign keys, JOIN
 ## Author
 
 **Betty Ejakpovi** — Data Analyst (Excel · SQL · Power BI)
-[LinkedIn](https://www.linkedin.com/in/orherime-ejakpovi) · [PORTFOLIO] https://betsej.github.io/
+[LinkedIn](https://www.linkedin.com/in/orherime-ejakpovi) · [Portfolio](https://betsej.github.io)
