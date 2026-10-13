@@ -17,11 +17,16 @@ A small electronics retailer needs a structured way to track customers, the prod
 
 ## Entity relationships
 
-Customer (1) ──< Orders (1) ──< Order_Items >── (1) Products
-Suppliers (independent reference table)
+
+* **Customer → Orders:** One customer can place many orders.
+* **Orders → Order_Items:** One order can contain multiple order items.
+* **Products → Order_Items:** One product can appear in multiple order items.
+* **Suppliers:** Maintained as a separate reference table.
 
 
-## Key query: order totals per customer
+
+### Key Query: Calculate Order Totals by Customer and Order
+
 
 ```sql
 SELECT c.FirstName, c.LastName, o.Order_id,
